@@ -21,7 +21,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.swing.text.html.HTML.Tag;
 
 import com.adarsh.myportal.api.vo.PostStatusEnum;
 
@@ -92,7 +91,7 @@ public class Post implements Serializable{
 	public void setPostStatus(PostStatusEnum postStatus) {
 		this.postStatus = postStatus;
 	}
-
+	@OneToMany
 	public List<Comment> getComments() {
 		return comments;
 	}

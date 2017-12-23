@@ -1,34 +1,33 @@
 /*
  * (C) Copyright 
- * Author :Adarsh , created on 04-Dec-2017
- * BlogServiceImpl.java ,
+ * Author :Adarsh , created on 19-Dec-2017
+ * BlogComponentImpl.java ,
  *
  */
 
-package com.adarsh.myportal.service.impl;
+package com.adarsh.myportal.component.impl;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-import com.adarsh.myportal.api.service.BlogService;
 import com.adarsh.myportal.api.vo.PostSearchVO;
 import com.adarsh.myportal.api.vo.PostVO;
 import com.adarsh.myportal.component.BlogComponent;
-
-/**
- * @author Adarsh
- * Implementation of BlogService API
- */
-@Service
-public class BlogServiceImpl implements BlogService {
-	
-	@Autowired
-	private BlogComponent blogComponentImpl;
-	
+import com.adarsh.myportal.dao.BlogDao;
+import com.adarsh.myportal.dao.jpa.entites.Post;
+@Component
+public class BlogComponentImpl implements BlogComponent{
+@Autowired
+private BlogDao blogDaoImpl;
 	@Override
 	public boolean postBlog(PostVO postVO) {
-		blogComponentImpl.postBlog(postVO);
+		// TODO Auto-generated method stub
+		Post post= new Post();
+		post.setTitle(postVO.getTitle());
+		post.setDescription(postVO.getDescription());
+		blogDaoImpl.createPost(post);
 		return false;
 	}
 

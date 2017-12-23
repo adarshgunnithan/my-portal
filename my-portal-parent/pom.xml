@@ -6,8 +6,8 @@
     <artifactId>my-portal-parent</artifactId>
     <version>1.0.0</version>
 	<modelVersion>4.0.0</modelVersion>
-	<modules>
+ <modules>
 		<module>my-portal-api</module>
-	</modules>
+	</modules> 
 	<packaging>pom</packaging>
 </project>

@@ -1,25 +1,20 @@
 /*
  * (C) Copyright 
- * Author :Adarsh , created on 15-Nov-2017
- * BlogService.java , Exposes all blogging services
+ * Author :Adarsh , created on 19-Dec-2017
+ * BlogComponent.java ,
  *
  */
 
-package com.adarsh.myportal.api.service;
+package com.adarsh.myportal.component;
 
 import java.util.List;
-import org.springframework.stereotype.Service;
+
+import org.springframework.stereotype.Component;
 
 import com.adarsh.myportal.api.vo.PostSearchVO;
 import com.adarsh.myportal.api.vo.PostVO;
 
-/**
- * @author Adarsh
- *BlogService : API Exposes all blogging services
- */
-
-public interface BlogService {
-	
+public interface BlogComponent {
 	/**
 	 * API to post blogs
 	 * @param postVO
@@ -54,5 +49,4 @@ public interface BlogService {
 	 * @return unique subscription id
 	 */
 	public String subscribeBlog(String mailId);
- 
 }

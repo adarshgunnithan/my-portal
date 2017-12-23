@@ -11,6 +11,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -26,7 +28,8 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String userUId;
-	
+	@Id
+	@GeneratedValue
 	@Column(name="user_id")
 	public String getUserUId() {
 		return userUId;
