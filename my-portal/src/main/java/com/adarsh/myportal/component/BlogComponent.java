@@ -8,12 +8,13 @@
 package com.adarsh.myportal.component;
 
 import java.util.List;
-
-import org.springframework.stereotype.Component;
-
 import com.adarsh.myportal.api.vo.PostSearchVO;
 import com.adarsh.myportal.api.vo.PostVO;
 
+/**
+ * @author Adarsh
+ *Component API for blog
+ */
 public interface BlogComponent {
 	/**
 	 * API to post blogs
